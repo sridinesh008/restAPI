@@ -1,0 +1,42 @@
+package com.demo.restclient;
+
+
+
+import java.awt.PageAttributes.MediaType;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.UriBuilder;
+import javax.ws.rs.core.MediaType;;
+
+import org.glassfish.jersey.client.ClientConfig;
+
+import com.sun.org.apache.xml.internal.utils.URI;
+
+public class demoClient {
+
+	public static void main(String[] args) {
+		
+		ClientConfig config = new ClientConfig();
+		Client client = ClientBuilder.newClient(config);
+		WebTarget webTarget = client.target(getCustomURI());
+		String response =webTarget.path("rest")
+										.path("cts")
+										.path("hello")
+										.request()
+										.accept(MediaType)
+										.toString();
+		String message = webTarget.
+										
+		
+		
+		
+	}
+
+	private static  URI getCustomURI() {
+		// TODO Auto-generated method stub
+		return UriBuilder.fromUri("http://localhost:8080/RestAPIJersey/rest/cts/hello").build();
+	}
+
+}

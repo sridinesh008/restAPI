@@ -1,0 +1,17 @@
+package com.jersey.helloWorld;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+@Path("/cts")
+public class HelloJersey {
+	@GET
+	@Path("/hello")
+	/@Produces()
+	public String SayHello(){
+		String message="Hello from Jersey";
+		return message;
+	}
+
+}

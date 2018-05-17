@@ -1,0 +1,18 @@
+package com.demo.restclient;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+
+import org.glassfish.jersey.client.ClientConfig;
+
+public class demoClient {
+
+	public static void main(String[] args) {
+		
+		ClientConfig config = new ClientConfig();
+		Client client = ClientBuilder.newClient(config);W
+		WebTarget webTarget = client.target("");
+		
+	}
+
+}

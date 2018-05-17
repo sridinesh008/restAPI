@@ -1,0 +1,9 @@
+package com.jersey.friends.service;
+
+import java.util.HashMap;
+
+public class FriendsCollectionService {
+
+	static HashMap<Integer, Friend>
+	
+}

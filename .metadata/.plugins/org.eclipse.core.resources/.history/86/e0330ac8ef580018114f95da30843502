@@ -1,0 +1,15 @@
+package com.jersey.friends.controller;
+
+
+
+
+public class simpleTest {
+
+	public static void main(String[] args) {
+	
+		public void test(){
+
+		}
+	}
+
+}

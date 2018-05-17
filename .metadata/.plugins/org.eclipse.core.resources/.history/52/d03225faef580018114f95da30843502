@@ -1,0 +1,19 @@
+package com.jersey.friends.controller;
+
+import java.util.HashMap;
+
+
+
+
+public class simpleTest {
+
+	
+	public void test(){
+ HashMap<key, Value> something= 
+	}
+	public static void main(String[] args) {
+	
+		
+	}
+
+}

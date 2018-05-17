@@ -1,0 +1,37 @@
+package com.jersey.helloWorld;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/cts")
+public class HelloJersey {
+	@GET
+	@Path("/hello")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String SauHi(){
+		String message="Hello from Jersey";
+		return message;
+		
+	}
+	
+	@GET
+	@Path("/{value}/{degreeFarenheit}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String SayHello(@PathParam("value")Int value,@PathParam("degreeFarenheit")String degreeFarenheit){
+		
+		if(degreeFarenheit=="c"){
+			String message="Temparature in Celcius "+;
+			return message;
+		}else{
+			String message="Temparature in Farenheit "+(value*(9/5)) + 32;
+			return message;
+		}
+			
+		}
+		
+	}
+
+}

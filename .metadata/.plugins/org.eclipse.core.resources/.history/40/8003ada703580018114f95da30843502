@@ -1,0 +1,58 @@
+package com.jersey.helloWorld;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@Path("/cts")
+public class HelloJersey {
+	@GET
+	@Path("/hello")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String SauHi(){
+		String message="Hello from Jersey";
+		return message;
+		
+	}
+	
+	@GET
+	@Path("/{value}/{degreeFarenheit}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String SayHello(@PathParam("value") float value,@PathParam("degreeFarenheit")String degreeFarenheit){
+		if(degreeFarenheit.equalsIgnoreCase("c")){
+			
+			double convertedValue= (value-32)/1.8;
+			String message="Temparature in Celcius " + convertedValue;
+			return message;
+		}else if(degreeFarenheit.equalsIgnoreCase("f")){
+			double convertedValue= value*(1.8) + 32;
+			String message="Temparature in Farenheit "+convertedValue;
+			return message;
+		}else{
+			return "invalid URL";
+		}
+			
+		}
+
+}

@@ -1,0 +1,29 @@
+package com.jersey.helloWorld;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/cts")
+public class HelloJersey {
+	@GET
+	@Path("/hello")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String SauHi(){
+		String message="Hello from Jersey";
+		return message;
+		
+	}
+	
+	@GET
+	@Path("/{name}/{location}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String SayHello(@PathParam("urlvalue1")String value1,@PathParam("urlvalue2")String value2){
+		String message="Hello from "+value1+ "from" +value2;
+		return message;
+		
+	}
+
+}
